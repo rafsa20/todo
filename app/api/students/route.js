@@ -10,6 +10,7 @@ if (!MONGO_URI) {
 if (!global._mongooseConn) {
   global._mongooseConn = mongoose.connect(MONGO_URI, {
     serverSelectionTimeoutMS: 20000, // timeout 20 detik
+    dbName: "studentdb",             // 🔥 pastikan selalu ke studentdb
   });
 }
 
